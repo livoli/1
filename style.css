@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4ece4;
+    transition: opacity 3s, visibility 3s;
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: '';
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #ee8ad4;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(77,42,42,0.7),rgba(77,42,42,0.7)),url(Free\ Photo\ _\ Paper\ note\ frame\ with\ brown\ Memphis\ pattern\ background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+/* for the logo png and the nav bar with lorem */
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+/* makes the nav bar in a line */
+
+.nav-links ul li a{
+    color: #f4ece4;
+    text-decoration: none;
+    font-size: 16;
+}
+/* text decoration for text in nav bar */
+
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background:#f2ca95 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: #f4ece4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #f4ece4;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #f4f4f4;
+    border: 1px solid #f4ece4;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f6bd19;
+    background:#f6bd19;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+.outline{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    color: #4d2a2a;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #4d2a2a;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.outline-col {
+    flex-basis: 31%;
+    background: #e1955e;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.outline-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.heading h1{
+    font-size: 50px;
+    color: #4d2a2a;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading h1::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #f4eaad;
+}
+
+.heading p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image{
+    flex:1;
+    margin-right: 80px;
+    overflow: hidden;
+}
+
+.about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.about-image:hover img{
+    transform: scale(1.061);
+}
+.about-content{
+    flex:1;
+}
+
+.about-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap to the next line if needed */
+    gap: 25px; /* Adjust space between items */
+}
+
+.stream-outline-link {
+    flex: 1 1 calc(10% - 20px); /* Adjusts each link to take 20% width, with a gap of 20px */
+    display: block; /* Ensures each link behaves like a block-level element */
+}
+
+.stream-outline{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.stream-outline-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stream-outline-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #f4ece4;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 39%;
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px); /* Adjusted Y value */
+}
+
+
+
+
+.footer{
+	background-color: #24262b;
+    padding: 50px 0;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer-col{
+   width: auto;
+   padding: 0 15px;
+}
+
+.footer-col ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #e1955e;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: bolder;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:50%;
+    transform: translateX(-50%);
+	bottom: -10px;
+	background-color: red;
+	height: 2px;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+    font-weight: 500;
+    color: #ffffff;
+	display: block;
+	transition: all .3s ease;
+}
+
+.footer-col ul li a {
+    position: relative; /* Establish positioning context for the pseudo-element */
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block; /* Make the links only as wide as their text */
+    text-align: center; /* Ensure text is centered */
+    transition: color 0.3s ease; /* Smooth text color change */
+}
+
+.footer-col ul li a::after {
+    content: '';
+    width: 0%; /* Start with no underline */
+    height: 2px;
+    background: #f6bd19; /* Underline color */
+    display: block;
+    position: absolute;
+    left: 50%; /* Start at the center of the text */
+    bottom: 0;
+    transform: translateX(-50%); /* Center the underline */
+    transition: width 0.5s ease; /* Smooth animation for width */
+}
+
+.footer-col ul li a:hover {
+    color: #f2ca95; /* Change text color on hover */
+}
+
+.footer-col ul li a:hover::after {
+    width: 100%; /* Expand underline to full text width from the center */
+}
+
